@@ -1,0 +1,90 @@
+
+
+ALGORITHM is palindrome
+VAR
+    word: STRING = "kayak"
+    reverseWord: STRING
+BEGIN
+    reverseWord = reverse_string(word)
+
+
+//check if word contains single chaaracter of an empty space
+IF (word.LENGTH < 2 OR word = " ") THEN
+    write(word + " " + "is a palindrome")
+END_IF
+    set_instructions
+END_IF    
+//compare the character in each word against the other
+
+IF (word = reverseWord) THEN
+    write(word + '' + "is not a palindrome")
+    
+END_IF
+
+
+    // compare the ending character in each word against the other
+IF (word[word.LENGTH -1] - reverseWord[reverseWord.length - 1]) THEN
+  
+  
+  // compare the reversed string againt each other to check if the word is a palindrome
+
+  IF (word = reverseWord) THEN
+    write(word + " " + "is a palidrome")
+  END_IF
+ELSE
+    write(word + " " + "is not a palidrome")
+END_IF
+
+END
+
+
+// A FUNCTION TO REVERSE  A STRING
+
+FUNCTION reverse_string(word) : STRING
+VAR
+    teststring: STRING = " ";
+BEGIN
+    //Decrement from the word.length - 1 until it is less than or equal to zero
+    FOR i FROM word.length -1 TO 0 STEP i-- DO
+        teststring = teststring + word[i]
+    END_FOR
+
+    RETURN teststring;
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+// PROCEDURE IsPalindrome(word: STRING)
+//     BEGIN
+//          i, j: INTEGER
+//          isPalindrome: BOOLEAN
+        
+//         isPalindrome := TRUE  // Assume the word is a palindrome initially
+//         i := 1
+//         j := LENGTH(word)
+
+//         WHILE (i < j) DO
+//             IF (word[i] <> word[j]) THEN
+//                 isPalindrome := FALSE  // Characters don't match, not a palindrome
+//                 BREAK
+//             END_IF
+//             i := i + 1
+//             j := j - 1
+//         END_WHILE
+
+//         IF (isPalindrome) THEN
+//             Write("The word is a palindrome.")
+//         ELSE
+//             Write("The word is not a palindrome.")
+//         END_IF
+//     END
